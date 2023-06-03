@@ -7,10 +7,12 @@
 body {
   font-family: 'Poppins', sans-serif;
   @apply bg-slate-50;
+  
 }
 
 .container {
   @apply w-full max-w-3xl p-5 mx-auto;
+  color: black;
 }
 
 * {
