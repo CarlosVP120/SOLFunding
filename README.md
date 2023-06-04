@@ -7,7 +7,7 @@
 
 <img width="1422" alt="Screenshot 2023-06-04 at 11 45 10" src="https://github.com/LilianaSP/SOLFunding/assets/102379771/66fdc465-0d68-457f-bdff-48e52e17be5c">
 
-### [Youtube Video ](https://sol-funding.vercel.app/)
+### [Youtube Video ](https://youtu.be/Dq2eY8LgEmk)
 
 
 
