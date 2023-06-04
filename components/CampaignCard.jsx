@@ -37,6 +37,7 @@ const Cards = ({ campaign, wallet }) => {
     // if (key) getBalances(key);
     // if (explorerUrl) setExplorerUrl("");
     async function fetchData() {
+      console.log(wallet);
       const provider = window?.phantom?.solana;
       const { solana } = window;
       let phantom;
