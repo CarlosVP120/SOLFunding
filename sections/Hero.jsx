@@ -50,7 +50,7 @@ const Hero = ({ fieldRef }) => (
           >
             <span class="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-purple-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0"></span>
             <span class="absolute inset-0 w-full h-full transition duration-300 transform translate-x-1 translate-y-1 bg-pink-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 mix-blend-screen"></span>
-            <span class="relative text-4xl">Explore</span>
+            <span class="relative text-4xl">Explore Campaigns</span>
           </a>
         </div>
         <a href="#explore">
