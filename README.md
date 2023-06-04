@@ -36,7 +36,7 @@ Install node into node_modules.
 
 ---
 
-## Install
+## Install with default dependencies
 
 ```bash
 $ npm i 
