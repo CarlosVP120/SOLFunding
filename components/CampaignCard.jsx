@@ -32,10 +32,6 @@ const Cards = ({ campaign, wallet }) => {
   const [showExplore, setShowExplore] = useState("");
 
   useEffect(() => {
-    // let key = window.localStorage.getItem("wallet");
-    // setWallet(key);
-    // if (key) getBalances(key);
-    // if (explorerUrl) setExplorerUrl("");
     async function fetchData() {
       getBalances(wallet);
     }
