@@ -59,7 +59,7 @@ export const Form = ({ wallet, setShowRegistrationForm }) => {
           id: camp_id,
         }),
       });
-    }, 1500);
+    }, 3000);
 
     setShowRegistrationForm(false);
     toast.success("Form submitted successfully");
@@ -94,7 +94,7 @@ export const Form = ({ wallet, setShowRegistrationForm }) => {
               Submit Campaign
             </button>
             <button
-              onClick={onSubmit}
+              onClick={() => setShowRegistrationForm(false)}
               className="p-5 rounded-md bg-red-600 font-semibold text-white flex items-center gap-1 hover:bg-red-700 transition-all duration-300"
             >
               Cancel
