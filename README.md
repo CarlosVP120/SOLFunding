@@ -1,4 +1,5 @@
-# SolFunding Revolutionizing: Harnessing the Power of Solana's Blockchain for Unprecedented Fundraising Opportunities. A Project Developed for SuperTeam's Hackathon. 
+# SolFunding Revolutionizing: Harnessing the Power of Solana's Blockchain for Unprecedented Fundraising Opportunities. 
+# A Project Developed for SuperTeam's Hackathon with Next.js Tailwind and React
 "Making Transactions to Multiple Foundations with Solana has never been easier"
 
 ### [Live Site](https://sol-funding.vercel.app/)
