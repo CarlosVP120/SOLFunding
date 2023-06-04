@@ -37,6 +37,7 @@ const Cards = ({ campaign, wallet }) => {
     }
     setTimeout(() => {
       fetchData();
+      console.log(balance);
     }, 1520);
     if (explorerUrl) setExplorerUrl("");
   }, []);
