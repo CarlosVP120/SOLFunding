@@ -2,7 +2,7 @@ import React from "react";
 
 const Cards = ({ campaign }) => {
   return (
-    <div className="bg-gray-800 rounded-lg shadow-lg p-4">
+    <div className="bg-gray-800 rounded-lg shadow-lg p-4 hover:transform hover:scale-105 transition duration-300 ease-in-out">
       <div className="relative aspect-w-3 aspect-h-2">
         <img
           src={campaign.photo}
