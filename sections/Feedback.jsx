@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
-import styles from '../styles';
-import { fadeIn, staggerContainer, zoomIn } from '../utils/motion';
+import styles from "../styles";
+import { fadeIn, staggerContainer, zoomIn } from "../utils/motion";
 
 const Feedback = () => (
   <section className={`${styles.paddings}`}>
@@ -15,7 +15,7 @@ const Feedback = () => (
       className={`${styles.innerWidth} mx-auto flex lg:flex-row flex-col gap-6`}
     >
       <motion.div
-        variants={fadeIn('right', 'tween', 0.2, 1)}
+        variants={fadeIn("right", "tween", 0.2, 1)}
         className="flex-[0.5] lg:max-w-[370px] flex justify-end flex-col gradient-05 sm:p-8 p-4 rounded-[32px] border-[1px] border-[#6A6A6A] relative"
       >
         <div className="feedback-gradient" />
@@ -29,28 +29,27 @@ const Feedback = () => (
         </div>
 
         <p className="mt-[24px] font-normal sm:text-[24px] text-[18px] sm:leading-[45.6px] leading-[39.6px] text-white">
-        "An exceptional leader recognizes the boundless potential of crowdfunding with Solana. 
-        They witness firsthand how this extraordinary combination propels projects forward, unlocks opportunities, 
-        and fosters a global community of changemakers."
+          "An exceptional leader recognizes the boundless potential of
+          crowdfunding with Solana. They witness firsthand how this
+          extraordinary combination propels projects forward, unlocks
+          opportunities, and fosters a global community of changemakers."
         </p>
       </motion.div>
 
       <motion.div
-        variants={fadeIn('left', 'tween', 0.2, 1)}
+        variants={fadeIn("left", "tween", 0.2, 1)}
         className="relative flex-1 flex justify-center items-center"
       >
         <img
-          src="/Solana-1.jpg"
+          src="https://cdn3d.iconscout.com/3d/premium/thumb/solana-5559860-4642625.png"
           alt="planet-09"
-          className="w-full lg:h-[610px] h-auto min-h-[210px] object-cover rounded-[40px]"
+          className="lg:h-[610px] h-auto min-h-[210px] object-cover rounded-[40px]"
         />
 
         <motion.div
           variants={zoomIn(0.4, 1)}
           className="lg:block hidden absolute -left-[10%] top-[3%]"
-        >
-         
-        </motion.div>
+        ></motion.div>
       </motion.div>
     </motion.div>
   </section>
