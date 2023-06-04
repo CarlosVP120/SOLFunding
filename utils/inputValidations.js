@@ -7,20 +7,16 @@
 *-------------------------------------------------------------------*/
 
 export const name_validation = {
-  name: "name",
-  label: "name",
+  name: "title",
+  label: "title",
   type: "text",
   multiType: false,
-  id: "name",
-  placeholder: "write your name ...",
+  id: "title",
+  placeholder: "name of the campaign...",
   validation: {
     required: {
       value: true,
       message: "required",
-    },
-    maxLength: {
-      value: 30,
-      message: "30 characters max",
     },
   },
 };
@@ -43,32 +39,28 @@ export const desc_validation = {
   },
 };
 
-export const password_validation = {
-  name: "password",
-  label: "password",
-  type: "password",
-  multiType: true,
-  id: "password",
-  placeholder: "type password ...",
+export const category_validation = {
+  name: "category",
+  label: "category",
+  type: "text",
+  multiType: false,
+  id: "category",
+  placeholder: "category of the campaign...",
   validation: {
     required: {
       value: true,
       message: "required",
     },
-    minLength: {
-      value: 6,
-      message: "min 6 characters",
-    },
   },
 };
 
 export const num_validation = {
-  name: "num",
-  label: "number",
+  name: "goal",
+  label: "goal",
   type: "number",
   multiType: false,
-  id: "num",
-  placeholder: "write a random number",
+  id: "goal",
+  placeholder: "write your goal in SOL...",
   validation: {
     required: {
       value: true,
@@ -77,22 +69,18 @@ export const num_validation = {
   },
 };
 
-export const email_validation = {
-  name: "email",
-  label: "email address",
-  type: "email",
+//url image validation
+export const image_validation = {
+  name: "image",
+  label: "image",
+  type: "text",
   multiType: false,
-  id: "email",
-  placeholder: "write a random email address",
+  id: "image",
+  placeholder: "image URL of the campaign...",
   validation: {
     required: {
       value: true,
       message: "required",
-    },
-    pattern: {
-      value:
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-      message: "Invalid",
     },
   },
 };

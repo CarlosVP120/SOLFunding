@@ -5,13 +5,14 @@ import { FormProvider, useForm } from "react-hook-form";
 import {
   name_validation,
   desc_validation,
-  email_validation,
+  image_validation,
   num_validation,
-  password_validation,
+  category_validation,
 } from "../utils/inputValidations";
 import { useState } from "react";
 import { GrMail } from "react-icons/gr";
 import { BsFillCheckSquareFill } from "react-icons/bs";
+import { toast } from "react-hot-toast";
 
 export const Form = () => {
   const methods = useForm();
@@ -21,6 +22,7 @@ export const Form = () => {
     console.log(data);
     methods.reset();
     setSuccess(true);
+    toast.success("Form submitted successfully");
   });
 
   return (
@@ -33,9 +35,9 @@ export const Form = () => {
       >
         <div className="grid gap-5 md:grid-cols-2">
           <Input {...name_validation} />
-          <Input {...email_validation} />
+          <Input {...image_validation} />
           <Input {...num_validation} />
-          <Input {...password_validation} />
+          <Input {...category_validation} />
           <Input {...desc_validation} className="md:col-span-2" />
         </div>
         <div className="mt-5">
