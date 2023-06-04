@@ -2,6 +2,6 @@
 "Making Transactions to Multiple Foundations with Solana has never been easier"
 
 ### [Live Site](https://sol-funding.vercel.app/)
-### [(https://sol-funding.vercel.app/)](https://sol-funding.vercel.app/)
+### ![(https://sol-funding.vercel.app/)](https://sol-funding.vercel.app/)
 
 
