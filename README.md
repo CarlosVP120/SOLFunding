@@ -43,18 +43,6 @@ Install node into node_modules.
 $ npm i 
 ```
 
-## Usage
-
-Add `engines['install-node'] = ${version}` on your application's `package.json`:
-
-```js
-"engines": {
-  "install-node": "^4.5.0"
-}
-```
-
-- `${version}` follow semver, can be `4.5.0`, `~4.5.0` or `^4.5.0`.
-
 Then run `npm run dev` command:
 
 ```bash
