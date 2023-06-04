@@ -32,13 +32,24 @@ const Cards = ({ campaign, wallet }) => {
   const [showExplore, setShowExplore] = useState("");
 
   useEffect(() => {
+    // let key = window.localStorage.getItem("wallet");
+    // setWallet(key);
+    // if (key) getBalances(key);
+    // if (explorerUrl) setExplorerUrl("");
     async function fetchData() {
-      getBalances(wallet);
+      const provider = window?.phantom?.solana;
+      const { solana } = window;
+      let phantom;
+      if (provider?.isPhantom) {
+        phantom = provider;
+      }
+
+      const { publicKey } = await phantom.connect({ onlyIfTrusted: true });
+      getBalances(publicKey.toString());
     }
     setTimeout(() => {
       fetchData();
-      console.log(balance);
-    }, 1520);
+    }, 1500);
     if (explorerUrl) setExplorerUrl("");
   }, []);
 
