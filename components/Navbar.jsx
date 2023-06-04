@@ -249,7 +249,12 @@ const Navbar = () => {
         )}
       </div>
       <div className="relative w-full h-full inset-0 z-50 mt-5">
-        {showRegistrationForm && <RegistrationForms />}
+        {showRegistrationForm && (
+          <RegistrationForms
+            wallet={wallet}
+            setShowRegistrationForm={setShowRegistrationForm}
+          />
+        )}
       </div>
       <Toaster />
     </div>

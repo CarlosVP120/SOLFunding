@@ -34,7 +34,10 @@ export const Input = ({
   return (
     <div className={cn("flex flex-col w-full gap-2", className)}>
       <div className="flex justify-between">
-        <label htmlFor={id} className="font-semibold capitalize text-slate-200">
+        <label
+          htmlFor={id}
+          className="font-semibold capitalize text-slate-200 bg-purple-500 py-1 px-2 rounded-md"
+        >
           {label}
         </label>
         <AnimatePresence mode="wait" initial={false}>
