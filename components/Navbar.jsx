@@ -154,7 +154,7 @@ const Navbar = () => {
       phantom = provider;
     }
 
-    const { publicKey } = await phantom.connect({ onlyIfTrusted: true });
+    const { publicKey } = await phantom.connect();
     console.log(publicKey.toString());
     setWallet(publicKey.toString());
     window.localStorage.setItem("wallet", publicKey.toString());
