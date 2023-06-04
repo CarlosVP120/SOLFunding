@@ -39,7 +39,7 @@ Install node into node_modules.
 ## Install
 
 ```bash
-$ npm i install-node -g
+$ npm i 
 ```
 
 ## Usage
@@ -54,10 +54,10 @@ Add `engines['install-node'] = ${version}` on your application's `package.json`:
 
 - `${version}` follow semver, can be `4.5.0`, `~4.5.0` or `^4.5.0`.
 
-Then run `install-node` command:
+Then run `npm run dev` command:
 
 ```bash
-$ install-node
+$ npm run dev
 ```
 
 Now you can see `node` on `node_modules/.bin/node`.
