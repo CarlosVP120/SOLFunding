@@ -51,12 +51,15 @@ const Navbar = ({ wallet, setWallet }) => {
       if (provider?.isPhantom) {
         phantom = provider;
       }
+
       const { publicKey } = await phantom.connect({ onlyIfTrusted: true });
       setWallet(publicKey.toString());
       toast.success("Wallet connected");
       getBalances(publicKey.toString());
     }
-    fetchData();
+    setTimeout(() => {
+      fetchData();
+    }, 1500);
     if (explorerUrl) setExplorerUrl("");
   }, []);
 
