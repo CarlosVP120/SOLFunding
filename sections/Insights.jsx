@@ -16,6 +16,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebase";
 import { useEffect } from "react";
+import CampaignCard from "../components/CampaignCard";
 
 const Insights = () => {
   // read data from firestore collection
@@ -44,9 +45,7 @@ const Insights = () => {
           textStyles="text-center"
         />
         <div className="mt-[50px] flex flex-col gap-[30px]">
-          {insights.map((item, index) => (
-            <InsightCard key={`insight-${index}`} {...item} index={index + 1} />
-          ))}
+          <CampaignCard />
         </div>
       </motion.div>
     </section>

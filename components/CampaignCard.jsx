@@ -2,7 +2,7 @@ import React from "react";
 
 const Cards = ({ campaign }) => {
   return (
-    <div className="bg-gray-800 rounded-lg shadow-lg p-4">
+    <div className="bg-gray-800 rounded-lg shadow-lg p-4 hover:transform hover:scale-105 transition duration-300 ease-in-out">
       <div className="relative aspect-w-3 aspect-h-2">
         <img
           src={campaign.photo}
@@ -121,8 +121,7 @@ const CampaignCard = () => {
   ];
 
   return (
-    <div className="container mx-auto py-8">
-      <h1 className="text-3xl font-bold mb-4">Campaigns</h1>
+    <div className=" mx-auto py-8">
       <CampaignsList campaigns={fakeCampaigns} />
     </div>
   );
