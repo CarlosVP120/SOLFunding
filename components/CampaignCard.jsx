@@ -35,7 +35,9 @@ const Cards = ({ campaign, wallet }) => {
     async function fetchData() {
       getBalances(wallet);
     }
-    fetchData();
+    setTimeout(() => {
+      fetchData();
+    }, 1520);
     if (explorerUrl) setExplorerUrl("");
   }, []);
 
@@ -61,15 +63,13 @@ const Cards = ({ campaign, wallet }) => {
 
   const getBalances = async (wallet) => {
     try {
-      setTimeout(async () => {
-        const connection = new Connection(
-          clusterApiUrl(SOLANA_NETWORK),
-          "confirmed"
-        );
-        const balance = await connection.getBalance(new PublicKey(wallet));
-        const balanceInSol = balance / LAMPORTS_PER_SOL;
-        setBalance(balanceInSol);
-      }, 1500);
+      const connection = new Connection(
+        clusterApiUrl(SOLANA_NETWORK),
+        "confirmed"
+      );
+      const balance = await connection.getBalance(new PublicKey(wallet));
+      const balanceInSol = balance / LAMPORTS_PER_SOL;
+      setBalance(balanceInSol);
     } catch (error) {
       console.log(error);
     }
