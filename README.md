@@ -1,7 +1,6 @@
-# Build and Deploy a Modern Next 13 Website With Framer Motion & Tailwind CSS
+# SolFunding Revolutionizing: Harnessing the Power of Solana's Blockchain for Unprecedented Fundraising Opportunities. A Project Developed for SuperTeam's Hackathon. 
+"Making Transactions to Multiple Foundations with Solana has never been easier"
 
-### [Live Site](https://metaverse-sage-psi.vercel.app/)
+### [Live Site](https://sol-funding.vercel.app/)
 
-![Chat Application](https://i.ibb.co/sbSHWH0/Thumbnail-1.png)
 
-## Launch your development career with project-based coaching - https://www.jsmastery.pro
