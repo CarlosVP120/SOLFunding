@@ -37,22 +37,13 @@ const Cards = ({ campaign, wallet }) => {
     // if (key) getBalances(key);
     // if (explorerUrl) setExplorerUrl("");
     async function fetchData() {
-      console.log(wallet);
-      const provider = window?.phantom?.solana;
-      const { solana } = window;
-      let phantom;
-      if (provider?.isPhantom) {
-        phantom = provider;
-      }
-
-      const { publicKey } = await phantom.connect({ onlyIfTrusted: true });
-      getBalances(publicKey.toString());
+      getBalances(wallet);
     }
     setTimeout(() => {
       fetchData();
-    }, 1500);
+    }, 1510);
     if (explorerUrl) setExplorerUrl("");
-  }, []);
+  }, [wallet]);
 
   const updateRaisedInDB = async (id) => {
     // find the registry in the database that contains the "id" and update the "raised" field
