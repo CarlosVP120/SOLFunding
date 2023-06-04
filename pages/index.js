@@ -1,3 +1,5 @@
+/*eslint quotes: ["error", "double"]*/
+/*eslint-env es6*/
 import { useRef, useState } from "react";
 import { Footer, Navbar } from "../components";
 import {

@@ -45,21 +45,21 @@ const Navbar = ({ wallet, setWallet }) => {
     // if (key) getBalances(key);
     // if (explorerUrl) setExplorerUrl("");
     async function fetchData() {
-      let key = window.localStorage.getItem("wallet");
-      if (key) {
-        const provider = window?.phantom?.solana;
-        const { solana } = window;
-        let phantom;
-        if (provider?.isPhantom) {
-          phantom = provider;
-        }
-        const { publicKey } = await phantom.connect({ onlyIfTrusted: true });
-        setWallet(publicKey.toString());
-        toast.success("Wallet connected");
-        getBalances(publicKey.toString());
+      const provider = window?.phantom?.solana;
+      const { solana } = window;
+      let phantom;
+      if (provider?.isPhantom) {
+        phantom = provider;
       }
+
+      const { publicKey } = await phantom.connect({ onlyIfTrusted: true });
+      setWallet(publicKey.toString());
+      toast.success("Wallet connected");
+      getBalances(publicKey.toString());
     }
-    fetchData();
+    setTimeout(() => {
+      fetchData();
+    }, 1000);
     if (explorerUrl) setExplorerUrl("");
   }, []);
 
