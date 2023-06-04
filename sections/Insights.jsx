@@ -18,7 +18,7 @@ import { db } from "../firebase";
 import { useEffect } from "react";
 import CampaignCard from "../components/CampaignCard";
 
-const Insights = () => {
+const Insights = ({ wallet, fieldRef }) => {
   // read data from firestore collection
   useEffect(() => {
     const data = onSnapshot(collection(db, "campaigns"), (snapshot) => {
@@ -31,7 +31,7 @@ const Insights = () => {
   }, []);
 
   return (
-    <section className={`${styles.paddings} relative z-10`}>
+    <div className={`${styles.paddings} relative z-10`} ref={fieldRef}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -41,14 +41,14 @@ const Insights = () => {
       >
         <TypingText title="| Insight" textStyles="text-center" />
         <TitleText
-          title={<>Insight about Solana crowdfunding</>}
+          title={<>Change the World Now!</>}
           textStyles="text-center"
         />
         <div className="mt-[50px] flex flex-col gap-[30px]">
-          <CampaignCard />
+          <CampaignCard wallet={wallet} />
         </div>
       </motion.div>
-    </section>
+    </div>
   );
 };
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Footer, Navbar } from "../components";
 import {
   About,
@@ -13,19 +13,20 @@ import {
 
 const Home = () => {
   const [wallet, setWallet] = useState(null);
+  const fieldRef = useRef(null);
 
   return (
     <div className="bg-primary-black h-screen">
-      <Navbar />
-      <Hero />
+      <Navbar wallet={wallet} setWallet={setWallet} />
+      <Hero fieldRef={fieldRef} />
       <div className="relative ">
         <About />
         <div className="gradient-03 z-0" />
         <Explore />
       </div>
-      <div className="relative overflow-hidden">
-        <Insights />
-        <div className="gradient-04 z-0" />
+      <div className="relative overflow-hidden ">
+        <Insights wallet={wallet} fieldRef={fieldRef} />
+        <div className="gradient-04 z-0 " />
         <WhatsNew />
       </div>
       <World />

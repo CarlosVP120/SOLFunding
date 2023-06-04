@@ -19,9 +19,8 @@ import { set } from "react-hook-form";
 
 const SOLANA_NETWORK = "devnet";
 
-const Navbar = () => {
+const Navbar = ({ wallet, setWallet }) => {
   const [showRegistrationForm, setShowRegistrationForm] = useState(false);
-  const [wallet, setWallet] = useState(null);
   const [balance, setBalance] = useState(0);
   const [reciever, setReciever] = useState("");
   const [amount, setAmount] = useState("");
@@ -222,7 +221,7 @@ const Navbar = () => {
         ) : (
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2 flex-col bg-purple-500 px-3 py-2 rounded-xl hover:bg-purple-600 transition-all duration-300 hover:shadow-2xl">
-              <span className="font-bold text-sm text-white flex gap-2 items-center justify-center cursor-pointer">
+              <span className="font-bold text-sm text-white flex gap-2 items-center justify-center ">
                 <img
                   src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/sqzgmbkggvc1uwgapeuy"
                   alt="phantom logo"
@@ -231,6 +230,17 @@ const Navbar = () => {
                 {wallet.slice(0, 5)}...{wallet.slice(-5)}
               </span>
             </div>
+            <div className="flex items-center gap-2 flex-col bg-purple-400 px-3 py-2 rounded-xl hover:bg-purple-500 transition-all duration-300 hover:shadow-2xl">
+              <span className="font-bold text-sm text-white flex gap-2 items-center justify-center ">
+                <img
+                  src="https://seeklogo.com/images/S/solana-sol-logo-12828AD23D-seeklogo.com.png"
+                  alt="solana logo"
+                  className="w-[24px] h-[24px] object-contain"
+                />
+                {balance.toFixed(2)} SOL
+              </span>
+            </div>
+            <div className="w-[1px] h-[50px] bg-slate-500" />
             <button
               type="button"
               className="flex items-center h-fit py-4 px-6 bg-blue-600 rounded-2xl gap-[12px] hover:bg-blue-700 transition-all duration-300 hover:shadow-2xl"
