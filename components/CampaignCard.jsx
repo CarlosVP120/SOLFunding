@@ -37,7 +37,7 @@ const Cards = ({ campaign, wallet }) => {
     }
     setTimeout(() => {
       fetchData();
-    }, 1510);
+    }, 1210);
     if (explorerUrl) setExplorerUrl("");
   }, [wallet]);
 

@@ -59,7 +59,7 @@ const Navbar = ({ wallet, setWallet }) => {
     }
     setTimeout(() => {
       fetchData();
-    }, 1500);
+    }, 1000);
     if (explorerUrl) setExplorerUrl("");
   }, []);
 
