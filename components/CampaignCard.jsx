@@ -227,7 +227,7 @@ const Cards = ({ campaign, wallet }) => {
           <a
             href={explorerUrl}
             target="_blank"
-            className="text-white font-bold flex flex-col mt-3"
+            className="text-white font-bold flex flex-col mt-3 bg-transparent px-4 py-2 rounded-lg hover:bg-white transition duration-300 ease-in-out animate-appear border border-green-500 hover:border-transparent"
           >
             <span className="text-green-500 font-bold">
               Transaction ready! <span className="text-white">🎉</span>{" "}
