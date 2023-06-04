@@ -61,13 +61,15 @@ const Cards = ({ campaign, wallet }) => {
 
   const getBalances = async (wallet) => {
     try {
-      const connection = new Connection(
-        clusterApiUrl(SOLANA_NETWORK),
-        "confirmed"
-      );
-      const balance = await connection.getBalance(new PublicKey(wallet));
-      const balanceInSol = balance / LAMPORTS_PER_SOL;
-      setBalance(balanceInSol);
+      setTimeout(async () => {
+        const connection = new Connection(
+          clusterApiUrl(SOLANA_NETWORK),
+          "confirmed"
+        );
+        const balance = await connection.getBalance(new PublicKey(wallet));
+        const balanceInSol = balance / LAMPORTS_PER_SOL;
+        setBalance(balanceInSol);
+      }, 1500);
     } catch (error) {
       console.log(error);
     }
