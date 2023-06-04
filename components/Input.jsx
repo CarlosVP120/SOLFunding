@@ -1,18 +1,10 @@
-/*-------------------------------------------------------------------
-|  🐼 React FC Input
-|
-|  🐯 Purpose: RE-USEABLE INPUT COMPOENT
-|
-|  🐸 Returns:  JSX
-*-------------------------------------------------------------------*/
-
-import cn from 'classnames'
-import { findInputError, isFormInvalid } from '../utils'
-import { useFormContext } from 'react-hook-form'
-import { AnimatePresence, motion } from 'framer-motion'
-import { MdError } from 'react-icons/md'
-import { FaEye, FaEyeSlash } from 'react-icons/fa'
-import { useState } from 'react'
+import cn from "classnames";
+import { findInputError, isFormInvalid } from "../utils";
+import { useFormContext } from "react-hook-form";
+import { AnimatePresence, motion } from "framer-motion";
+import { MdError } from "react-icons/md";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useState } from "react";
 
 export const Input = ({
   name,
@@ -28,20 +20,21 @@ export const Input = ({
   const {
     register,
     formState: { errors },
-  } = useFormContext()
+  } = useFormContext();
 
-  const inputErrors = findInputError(errors, name)
-  const isInvalid = isFormInvalid(inputErrors)
+  const inputErrors = findInputError(errors, name);
+  const isInvalid = isFormInvalid(inputErrors);
 
-  const [passwordType, setPasswordType] = useState(type)
+  const [passwordType, setPasswordType] = useState(type);
 
-  const input_tailwind = 'bg-white p-5 font-medium rounded-md w-full border border-slate-300 placeholder:opacity-60'
-  const view_password = 'relative right-auto'
+  const input_tailwind =
+    "bg-white p-5 font-medium rounded-md w-full border border-slate-300 placeholder:opacity-60";
+  const view_password = "relative right-auto";
 
   return (
-    <div className={cn('flex flex-col w-full gap-2', className)}>
+    <div className={cn("flex flex-col w-full gap-2", className)}>
       <div className="flex justify-between">
-        <label htmlFor={id} className="font-semibold capitalize">
+        <label htmlFor={id} className="font-semibold capitalize text-slate-200">
           {label}
         </label>
         <AnimatePresence mode="wait" initial={false}>
@@ -57,7 +50,10 @@ export const Input = ({
         <textarea
           id={id}
           type={type}
-          className={cn(input_tailwind, 'min-h-[10rem] max-h-[20rem] resize-y')}
+          className={cn(
+            input_tailwind,
+            "min-h-[10rem] max-h-[20rem] resize-y text-black"
+          )}
           placeholder={placeholder}
           {...register(name, validation)}
         ></textarea>
@@ -65,19 +61,23 @@ export const Input = ({
         <>
           {multiType ? (
             <>
-              <div className={cn(input_tailwind) + 'relative flex flex-row'}>
+              <div
+                className={
+                  cn(input_tailwind) + "relative flex flex-row text-black"
+                }
+              >
                 <input
                   id={id}
                   type={passwordType}
-                  className="w-[100%] focus:outline-none "
+                  className="w-[100%] focus:outline-none text-black"
                   placeholder={placeholder}
                   {...register(name, validation)}
                 />
-                {passwordType === 'password' ? (
+                {passwordType === "password" ? (
                   <button
                     className={cn(view_password)}
                     onClick={() => {
-                      setPasswordType('text')
+                      setPasswordType("text");
                     }}
                   >
                     <FaEye />
@@ -86,7 +86,7 @@ export const Input = ({
                   <button
                     className={cn(view_password)}
                     onClick={() => {
-                      setPasswordType('password')
+                      setPasswordType("password");
                     }}
                   >
                     <FaEyeSlash />
@@ -106,8 +106,8 @@ export const Input = ({
         </>
       )}
     </div>
-  )
-}
+  );
+};
 
 const InputError = ({ message }) => {
   return (
@@ -118,12 +118,12 @@ const InputError = ({ message }) => {
       <MdError />
       {message}
     </motion.p>
-  )
-}
+  );
+};
 
 const framer_error = {
   initial: { opacity: 0, y: 10 },
   animate: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: 10 },
   transition: { duration: 0.2 },
-}
+};

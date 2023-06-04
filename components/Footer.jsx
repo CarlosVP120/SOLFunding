@@ -1,11 +1,11 @@
-'use client';
-import { motion } from 'framer-motion';
-import { socials } from '../constants';
-import { useState } from 'react';
-import RegistrationForms from './RegistrationForms';
+"use client";
+import { motion } from "framer-motion";
+import { socials } from "../constants";
+import { useState } from "react";
+import RegistrationForms from "./RegistrationForms";
 
-import styles from '../styles';
-import { footerVariants } from '../utils/motion';
+import styles from "../styles";
+import { footerVariants } from "../utils/motion";
 
 const Footer = () => {
   const [showRegistrationForm, setShowRegistrationForm] = useState(false);
@@ -15,12 +15,7 @@ const Footer = () => {
   };
 
   return (
-    <motion.footer
-      variants={footerVariants}
-      initial="hidden"
-      whileInView="show"
-      className={`${styles.xPaddings} py-8 relative`}
-    >
+    <div className={`${styles.xPaddings} py-8 relative`}>
       <div className="footer-gradient" />
       <div className={`${styles.innerWidth} mx-auto flex flex-col gap-8`}>
         <div className="flex items-center justify-between flex-wrap gap-5">
@@ -50,8 +45,7 @@ const Footer = () => {
               SOLANA CROWDFUNDING
             </h4>
             <p className="font-normal text-[14px] text-white opacity-50">
-              Copyright © 2021 - 2023 Solana Crowdfunding. All rights
-              reserved.
+              Copyright © 2021 - 2023 Solana Crowdfunding. All rights reserved.
             </p>
 
             <div className="flex gap-4">
@@ -67,7 +61,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </motion.footer>
+    </div>
   );
 };
 
