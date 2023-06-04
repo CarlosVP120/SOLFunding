@@ -11,7 +11,7 @@
 
 
 
-# install-node
+# Install Node.js before running the project
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
